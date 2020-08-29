@@ -29,12 +29,13 @@ function isGuessCorrect(e) {
 
     again.textContent = "Wanna play again";
     play.style.display = "block";
+    guess.setAttribute("readonly", "");
 
     console.log(true);
   } else {
     console.log(false);
     --left;
-    if (left != 0) {
+    if (left >= 1) {
       message.textContent = `${guess.value} is the not correct answer and you have ${left} more guesses`;
       message.style.color = "red";
       guess.value = "";
@@ -42,6 +43,7 @@ function isGuessCorrect(e) {
       message.textContent = `NOPE!!.....The correct number was  ${random}`;
       again.textContent = "Wanna play again";
       play.style.display = "block";
+      guess.setAttribute("readonly", "");
     }
   }
 }
