@@ -49,3 +49,5 @@ function isGuessCorrect(e) {
 play.addEventListener("click", function () {
   location.reload();
 });
+
+// doing something crazy
